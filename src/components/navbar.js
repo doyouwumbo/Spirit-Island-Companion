@@ -8,7 +8,7 @@ export function Navbar() {
     <AppBar position="sticky" sx={{maxWidth: '98.9%', margin: '10px', mb: '50px'}}>
       <Toolbar>
         <Typography>
-          This is an app bar
+          Future feature
         </Typography>  
       </Toolbar>
     </AppBar>
