@@ -49,7 +49,7 @@ export function ElementTracker() {
   const [downAnimalButtonClickFlag, setAnimalDownButtonClickFlag] = useState(false);
 
   return(
-    <Box sx={{margin: "60px", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: 'column'}}>
+    <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: 'column'}}>
       <Button variant="contained" onClick={() => {
         setNumSun(0);
         setNumMoon(0);
