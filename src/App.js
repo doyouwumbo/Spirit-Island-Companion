@@ -8,11 +8,11 @@ import {Box} from "@mui/material";
 
 function App() {
   return (
-    <Box sx={{display: "flex", border: 1, flexGrow: "true", justifyContent: "center", alignItems: "center"}} >
-      {/* <Navbar /> */}
-      {/* <Welcome /> */}
-      <ElementTracker />
-    </Box>
+      <Box>
+        <Navbar/>
+        {/* <Welcome /> */}
+        <ElementTracker />
+      </Box>
   );
 }
 
