@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Spirit-Island-Companion/static/css/main.130cb8f8.css",
-    "main.js": "/Spirit-Island-Companion/static/js/main.d9c682c0.js",
+    "main.js": "/Spirit-Island-Companion/static/js/main.e28c4f35.js",
     "static/js/787.28cb0dcd.chunk.js": "/Spirit-Island-Companion/static/js/787.28cb0dcd.chunk.js",
     "static/media/fire.png": "/Spirit-Island-Companion/static/media/fire.5c8645bd75f3c2d548a0.png",
     "static/media/sun.png": "/Spirit-Island-Companion/static/media/sun.4119cea5e2f2dd1f38a8.png",
@@ -18,11 +18,11 @@
     "static/media/logo.svg": "/Spirit-Island-Companion/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Spirit-Island-Companion/index.html",
     "main.130cb8f8.css.map": "/Spirit-Island-Companion/static/css/main.130cb8f8.css.map",
-    "main.d9c682c0.js.map": "/Spirit-Island-Companion/static/js/main.d9c682c0.js.map",
+    "main.e28c4f35.js.map": "/Spirit-Island-Companion/static/js/main.e28c4f35.js.map",
     "787.28cb0dcd.chunk.js.map": "/Spirit-Island-Companion/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.130cb8f8.css",
-    "static/js/main.d9c682c0.js"
+    "static/js/main.e28c4f35.js"
   ]
 }
