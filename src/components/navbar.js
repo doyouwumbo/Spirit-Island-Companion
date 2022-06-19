@@ -6,7 +6,7 @@ import { Box } from "@mui/system";
 
 export function Navbar() {
   return (
-    <Box sx={{border: 1, margin: '10px', mb: '40px', minWidth: '600px'}}>
+    <Box sx={{ml: '10px', mt: '10px', mb: '40px', pr:'10px', minWidth: '600px'}}>
       <AppBar position="sticky">
         <Toolbar>
           <Typography>
