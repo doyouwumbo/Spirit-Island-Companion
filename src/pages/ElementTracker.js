@@ -13,8 +13,11 @@ import UpArrow from '../assets/img/uparrow.svg';
 import DownArrow from '../assets/img/downarrow.svg';
 import UpClicked from '../assets/img/uparrowclicked.svg';
 import DownClicked from '../assets/img/downarrowclicked.svg';
+import resetNormal from '../assets/img/resetnormal.svg';
+import resetDown from '../assets/img/reset.svg';
 import { Button } from '@mui/material';
 import { useState } from 'react';
+import {isMobile} from 'react-device-detect'
 import '../index.css';
 
 
@@ -47,24 +50,34 @@ export function ElementTracker() {
   const [downLeafButtonClickFlag, setLeafDownButtonClickFlag] = useState(false);
   const [upAnimalButtonClickFlag, setAnimalUpButtonClickFlag] = useState(false);
   const [downAnimalButtonClickFlag, setAnimalDownButtonClickFlag] = useState(false);
+  const [resetButtonFlag, setResetButtonFlag] = useState(false);
+
+  function resetElements() {
+    setNumSun(0);
+    setNumMoon(0);
+    setNumFire(0);
+    setNumAir(0);
+    setNumWater(0);
+    setNumMountain(0);
+    setNumLeaf(0);
+    setNumAnimal(0);
+  }
 
   return(
     <Box sx={{minWidth: "600px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
-      <Button variant="contained" onClick={() => {
-        setNumSun(0);
-        setNumMoon(0);
-        setNumFire(0);
-        setNumAir(0);
-        setNumWater(0);
-        setNumMountain(0);
-        setNumLeaf(0);
-        setNumAnimal(0);
-        }}>
-        Reset
+
+      {/* Reset button */}
+      <Button sx={{width: '250px', height: '70px'}} onClick={resetElements}
+      onMouseDown={() => {setResetButtonFlag(!resetButtonFlag)}}
+      onMouseUp={() => {setResetButtonFlag(!resetButtonFlag)}}
+      onMouseLeave={() => {setResetButtonFlag(false)}}
+      disableRipple={true}
+      >
+        <img style={{width: '250px'}} draggable="false" alt="resetbutton" src={resetButtonFlag ? resetDown : resetNormal} />
       </Button>
     
       <Box sx={{mt: '50px',display: "flex", justifyContent: "center", alignItems: "center"}}>
-        <Stack spacing={3} sx={{mr: "150px"}}>
+        <Stack spacing={isMobile ? 3 : 5} sx={{mr: "150px"}}>
           <div id='sun'>
             <Box sx={{display: 'flex', alignItems: 'center'}}>
               <Stack sx={{mr: '10px'}}>
@@ -178,7 +191,8 @@ export function ElementTracker() {
           </div>
         </Stack>
 
-        <Stack spacing={3}>
+        {/* Right stack */}
+        <Stack spacing={isMobile ? 3 : 5}>
           <div id='water'>
             <Box sx={{display: 'flex', alignItems: 'center'}}>
               <Stack sx={{mr: '10px'}}>
@@ -186,6 +200,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setWaterUpButtonClickFlag(!upWaterButtonClickFlag);}}
                   onMouseUp={() => {setWaterUpButtonClickFlag(!upWaterButtonClickFlag);}}
                   onMouseLeave={() => setWaterUpButtonClickFlag(false)}
+                  onTouchStart={() => {setWaterUpButtonClickFlag(!upWaterButtonClickFlag);}}
+                  onTouchEnd={() => {setWaterUpButtonClickFlag(!upWaterButtonClickFlag);}}
+                  onTouchCancel={() => setWaterUpButtonClickFlag(false)}
                   onClick={() => {setNumWater(numWater + 1)}}
                   disabled={numWater + 1 > 99 ? true : false}
                 >
