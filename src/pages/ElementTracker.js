@@ -71,6 +71,9 @@ export function ElementTracker() {
       onMouseDown={() => {setResetButtonFlag(!resetButtonFlag)}}
       onMouseUp={() => {setResetButtonFlag(!resetButtonFlag)}}
       onMouseLeave={() => {setResetButtonFlag(false)}}
+      onTouchStart={() => {setResetButtonFlag(!resetButtonFlag)}}
+      onTouchEnd={() => {setResetButtonFlag(!resetButtonFlag)}}
+      onTouchCancel={() => {setResetButtonFlag(false)}}
       disableRipple={true}
       >
         <img style={{width: '250px'}} draggable="false" alt="resetbutton" src={resetButtonFlag ? resetDown : resetNormal} />
@@ -85,6 +88,9 @@ export function ElementTracker() {
                 onMouseDown={() => {setSunUpButtonClickFlag(!upSunButtonClickFlag);}}
                 onMouseUp={() => {setSunUpButtonClickFlag(!upSunButtonClickFlag);}}
                 onMouseLeave={() => setSunUpButtonClickFlag(false)}
+                onTouchStart={() => {setSunUpButtonClickFlag(!upSunButtonClickFlag);}}
+                onTouchEnd={() => {setSunUpButtonClickFlag(!upSunButtonClickFlag);}}
+                onTouchCancel={() => setSunUpButtonClickFlag(false)}
                 onClick={() => {setNumSun(numSun + 1)}}
                 disabled={numSun + 1 > 99 ? true : false}
                 >
@@ -95,6 +101,9 @@ export function ElementTracker() {
                 onMouseDown={() => {setSunDownButtonClickFlag(!downSunButtonClickFlag);}}
                 onMouseUp={() => {setSunDownButtonClickFlag(!downSunButtonClickFlag);}}
                 onMouseLeave={() => setSunDownButtonClickFlag(false)}
+                onTouchStart={() => {setSunDownButtonClickFlag(!downSunButtonClickFlag);}}
+                onTouchEnd={() => {setSunDownButtonClickFlag(!downSunButtonClickFlag);}}
+                onTouchCancel={() => setSunDownButtonClickFlag(false)}
                 onClick={() => {setNumSun(numSun - 1)}}
                 disabled={numSun - 1 < 0 ? true : false}
                 >
@@ -102,7 +111,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numSun}</Typography>
-              <img className="no-select" draggable="false" src={SunElement} style={{maxWidth: 75}}></img>
+              <img alt="sun" className="no-select" draggable="false" src={SunElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -113,6 +122,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setMoonUpButtonClickFlag(!upMoonButtonClickFlag);}}
                   onMouseUp={() => {setMoonUpButtonClickFlag(!upMoonButtonClickFlag);}}
                   onMouseLeave={() => setMoonUpButtonClickFlag(false)}
+                  onTouchStart={() => {setMoonUpButtonClickFlag(!upMoonButtonClickFlag);}}
+                  onTouchEnd={() => {setMoonUpButtonClickFlag(!upMoonButtonClickFlag);}}
+                  onTouchCancel={() => setMoonUpButtonClickFlag(false)}
                   onClick={() => {setNumMoon(numMoon + 1)}}
                   disabled={numMoon + 1 > 99 ? true : false}
                 >
@@ -123,6 +135,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setMoonDownButtonClickFlag(!downMoonButtonClickFlag);}}
                   onMouseUp={() => {setMoonDownButtonClickFlag(!downMoonButtonClickFlag);}}
                   onMouseLeave={() => setMoonDownButtonClickFlag(false)}
+                  onTouchStart={() => {setMoonDownButtonClickFlag(!downMoonButtonClickFlag);}}
+                  onTouchEnd={() => {setMoonDownButtonClickFlag(!downMoonButtonClickFlag);}}
+                  onTouchCancel={() => setMoonDownButtonClickFlag(false)}
                   onClick={() => {setNumMoon(numMoon - 1)}}
                   disabled={numMoon - 1 < 0 ? true : false}
                 >
@@ -130,7 +145,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numMoon}</Typography>
-              <img className="no-select" draggable="false" src={MoonElement} style={{maxWidth: 75}}></img>
+              <img alt="moon" className="no-select" draggable="false" src={MoonElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -141,6 +156,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setFireUpButtonClickFlag(!upFireButtonClickFlag);}}
                   onMouseUp={() => {setFireUpButtonClickFlag(!upFireButtonClickFlag);}}
                   onMouseLeave={() => setFireUpButtonClickFlag(false)}
+                  onTouchStart={() => {setFireUpButtonClickFlag(!upFireButtonClickFlag);}}
+                  onTouchEnd={() => {setFireUpButtonClickFlag(!upFireButtonClickFlag);}}
+                  onTouchCancel={() => setFireUpButtonClickFlag(false)}
                   onClick={() => {setNumFire(numFire + 1)}}
                   disabled={numFire + 1 > 99 ? true : false}
                 >
@@ -151,6 +169,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setFireDownButtonClickFlag(!downFireButtonClickFlag);}}
                   onMouseUp={() => {setFireDownButtonClickFlag(!downFireButtonClickFlag);}}
                   onMouseLeave={() => setFireDownButtonClickFlag(false)}
+                  onTouchStart={() => {setFireDownButtonClickFlag(!downFireButtonClickFlag);}}
+                  onTouchEnd={() => {setFireDownButtonClickFlag(!downFireButtonClickFlag);}}
+                  onTouchCancel={() => setFireDownButtonClickFlag(false)}
                   onClick={() => {setNumFire(numFire - 1)}}
                   disabled={numFire - 1 < 0 ? true : false}
                 >
@@ -158,7 +179,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numFire}</Typography>
-              <img className="no-select" draggable="false" src={FireElement} style={{maxWidth: 75}}></img>
+              <img alt="fire" className="no-select" draggable="false" src={FireElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -169,6 +190,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setAirUpButtonClickFlag(!upAirButtonClickFlag);}}
                   onMouseUp={() => {setAirUpButtonClickFlag(!upAirButtonClickFlag);}}
                   onMouseLeave={() => setAirUpButtonClickFlag(false)}
+                  onTouchStart={() => {setAirUpButtonClickFlag(!upAirButtonClickFlag);}}
+                  onTouchEnd={() => {setAirUpButtonClickFlag(!upAirButtonClickFlag);}}
+                  onTouchCancel={() => setAirUpButtonClickFlag(false)}
                   onClick={() => {setNumAir(numAir + 1)}}
                   disabled={numAir + 1 > 99 ? true : false}
                 >
@@ -179,6 +203,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setAirDownButtonClickFlag(!downAirButtonClickFlag);}}
                   onMouseUp={() => {setAirDownButtonClickFlag(!downAirButtonClickFlag);}}
                   onMouseLeave={() => setAirDownButtonClickFlag(false)}
+                  onTouchStart={() => {setAirDownButtonClickFlag(!downAirButtonClickFlag);}}
+                  onTouchEnd={() => {setAirDownButtonClickFlag(!downAirButtonClickFlag);}}
+                  onTouchCancel={() => setAirDownButtonClickFlag(false)}
                   onClick={() => {setNumAir(numAir - 1)}}
                   disabled={numAir - 1 < 0 ? true : false}
                 >
@@ -186,7 +213,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numAir}</Typography>
-              <img className="no-select" draggable="false" src={AirElement} style={{maxWidth: 75}}></img>
+              <img alt="air" className="no-select" draggable="false" src={AirElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
         </Stack>
@@ -213,6 +240,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setWaterDownButtonClickFlag(!downWaterButtonClickFlag);}}
                   onMouseUp={() => {setWaterDownButtonClickFlag(!downWaterButtonClickFlag);}}
                   onMouseLeave={() => setWaterDownButtonClickFlag(false)}
+                  onTouchStart={() => {setWaterDownButtonClickFlag(!downWaterButtonClickFlag);}}
+                  onTouchEnd={() => {setWaterDownButtonClickFlag(!downWaterButtonClickFlag);}}
+                  onTouchCancel={() => setWaterDownButtonClickFlag(false)}
                   onClick={() => {setNumWater(numWater - 1)}}
                   disabled={numWater - 1 < 0 ? true : false}
                 >
@@ -220,7 +250,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numWater}</Typography>
-              <img className="no-select" draggable="false" src={WaterElement} style={{maxWidth: 75}}></img>
+              <img alt="water" className="no-select" draggable="false" src={WaterElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -231,6 +261,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setMountainUpButtonClickFlag(!upMountainButtonClickFlag);}}
                   onMouseUp={() => {setMountainUpButtonClickFlag(!upMountainButtonClickFlag);}}
                   onMouseLeave={() => setMountainUpButtonClickFlag(false)}
+                  onTouchStart={() => {setMountainUpButtonClickFlag(!upMountainButtonClickFlag);}}
+                  onTouchEnd={() => {setMountainUpButtonClickFlag(!upMountainButtonClickFlag);}}
+                  onTouchCancel={() => setMountainUpButtonClickFlag(false)}
                   onClick={() => {setNumMountain(numMountain + 1)}}
                   disabled={numMountain + 1 > 99 ? true : false}
                 >
@@ -241,6 +274,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setMountainDownButtonClickFlag(!downMountainButtonClickFlag);}}
                   onMouseUp={() => {setMountainDownButtonClickFlag(!downMountainButtonClickFlag);}}
                   onMouseLeave={() => setMountainDownButtonClickFlag(false)}
+                  onTouchStart={() => {setMountainDownButtonClickFlag(!downMountainButtonClickFlag);}}
+                  onTouchEnd={() => {setMountainDownButtonClickFlag(!downMountainButtonClickFlag);}}
+                  onTouchCancel={() => setMountainDownButtonClickFlag(false)}
                   onClick={() => {setNumMountain(numMountain - 1)}}
                   disabled={numMountain - 1 < 0 ? true : false}
                 >
@@ -248,7 +284,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numMountain}</Typography>
-              <img className="no-select" draggable="false" src={MountainElement} style={{maxWidth: 75}}></img>
+              <img alt="mountain" className="no-select" draggable="false" src={MountainElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -259,6 +295,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setLeafUpButtonClickFlag(!upLeafButtonClickFlag);}}
                   onMouseUp={() => {setLeafUpButtonClickFlag(!upLeafButtonClickFlag);}}
                   onMouseLeave={() => setLeafUpButtonClickFlag(false)}
+                  onTouchStart={() => {setLeafUpButtonClickFlag(!upLeafButtonClickFlag);}}
+                  onTouchEnd={() => {setLeafUpButtonClickFlag(!upLeafButtonClickFlag);}}
+                  onTouchCancel={() => setLeafUpButtonClickFlag(false)}
                   onClick={() => {setNumLeaf(numLeaf + 1)}}
                   disabled={numLeaf + 1 > 99 ? true : false}
                 >
@@ -269,6 +308,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setLeafDownButtonClickFlag(!downLeafButtonClickFlag);}}
                   onMouseUp={() => {setLeafDownButtonClickFlag(!downLeafButtonClickFlag);}}
                   onMouseLeave={() => setLeafDownButtonClickFlag(false)}
+                  onTouchStart={() => {setLeafDownButtonClickFlag(!downLeafButtonClickFlag);}}
+                  onTouchEnd={() => {setLeafDownButtonClickFlag(!downLeafButtonClickFlag);}}
+                  onTouchCancel={() => setLeafDownButtonClickFlag(false)}
                   onClick={() => {setNumLeaf(numLeaf - 1)}}
                   disabled={numLeaf - 1 < 0 ? true : false}
                 >
@@ -276,7 +318,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numLeaf}</Typography>
-              <img className="no-select" draggable="false" src={LeafElement} style={{maxWidth: 75}}></img>
+              <img alt="leaf" className="no-select" draggable="false" src={LeafElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -287,6 +329,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setAnimalUpButtonClickFlag(!upAnimalButtonClickFlag);}}
                   onMouseUp={() => {setAnimalUpButtonClickFlag(!upAnimalButtonClickFlag);}}
                   onMouseLeave={() => setAnimalUpButtonClickFlag(false)}
+                  onTouchStart={() => {setAnimalUpButtonClickFlag(!upAnimalButtonClickFlag);}}
+                  onTouchEnd={() => {setAnimalUpButtonClickFlag(!upAnimalButtonClickFlag);}}
+                  onTouchCancel={() => setAnimalUpButtonClickFlag(false)}
                   onClick={() => {setNumAnimal(numAnimal + 1)}}
                   disabled={numAnimal + 1 > 99 ? true : false}
                 >
@@ -297,6 +342,9 @@ export function ElementTracker() {
                   onMouseDown={() => {setAnimalDownButtonClickFlag(!downAnimalButtonClickFlag);}}
                   onMouseUp={() => {setAnimalDownButtonClickFlag(!downAnimalButtonClickFlag);}}
                   onMouseLeave={() => setAnimalDownButtonClickFlag(false)}
+                  onTouchStart={() => {setAnimalDownButtonClickFlag(!downAnimalButtonClickFlag);}}
+                  onTouchEnd={() => {setAnimalDownButtonClickFlag(!downAnimalButtonClickFlag);}}
+                  onTouchCancel={() => setAnimalDownButtonClickFlag(false)}
                   onClick={() => {setNumAnimal(numAnimal - 1)}}
                   disabled={numAnimal - 1 < 0 ? true : false}
                 >
@@ -304,7 +352,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numAnimal}</Typography>
-              <img className="no-select" draggable="false" src={AnimalElement} style={{maxWidth: 75}}></img>
+              <img alt="animal" className="no-select" draggable="false" src={AnimalElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
         </Stack>
