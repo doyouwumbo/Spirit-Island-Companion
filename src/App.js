@@ -1,18 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 import { Welcome } from './pages/welcome';
 import {Navbar} from './components/navbar';
-import {Router} from "react-router-dom";
 import {ElementTracker} from "./pages/ElementTracker";
-import {Box} from "@mui/material";
+import { BrowserRouter as Router, Route, Navigate, Routes } from "react-router-dom";
 
 function App() {
   return (
-      <Box>
-        <Navbar/>
-        {/* <Welcome /> */}
-        <ElementTracker />
-      </Box>
+      <Router basename="/Spirit-Island-Companion">
+          <Navbar/>
+            <Routes>
+              <Route exact path="/" element={<Navigate to="/element-tracker" />} />
+              <Route path="/welcome" element={<Welcome />}/>
+              <Route path="/element-tracker" element={<ElementTracker />} />
+            </Routes>
+      </Router>
   );
 }
 
