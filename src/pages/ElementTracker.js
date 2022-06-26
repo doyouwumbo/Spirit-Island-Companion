@@ -80,7 +80,7 @@ export function ElementTracker() {
       </Button>
     
       <Box sx={{mt: '50px',display: "flex", justifyContent: "center", alignItems: "center"}}>
-        <Stack spacing={isMobile ? 3 : 5} sx={{mr: "150px"}}>
+        <Stack spacing={isMobile ? 3 : 5} sx={{mr: "100px"}}>
           <div id='sun'>
             <Box sx={{display: 'flex', alignItems: 'center'}}>
               <Stack sx={{mr: '10px'}}>
@@ -110,7 +110,7 @@ export function ElementTracker() {
                   <img draggable="false" alt="downarrow" src={downSunButtonClickFlag ? DownClicked : DownArrow} style={{maxWidth: "60px"}}  />
                 </Button>
               </Stack>
-              <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numSun}</Typography>
+              <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numSun}</Typography>
               <img alt="sun" className="no-select" draggable="false" src={SunElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
@@ -144,7 +144,7 @@ export function ElementTracker() {
                 <img draggable="false" alt="downarrow" src={downMoonButtonClickFlag ? DownClicked : DownArrow} style={{maxWidth: "60px"}}  />
                 </Button>
               </Stack>
-              <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numMoon}</Typography>
+              <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numMoon}</Typography>
               <img alt="moon" className="no-select" draggable="false" src={MoonElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
@@ -178,7 +178,7 @@ export function ElementTracker() {
                 <img draggable="false" alt="downarrow" src={downFireButtonClickFlag ? DownClicked : DownArrow} style={{maxWidth: "60px"}}  />
                 </Button>
               </Stack>
-              <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numFire}</Typography>
+              <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numFire}</Typography>
               <img alt="fire" className="no-select" draggable="false" src={FireElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
@@ -212,7 +212,7 @@ export function ElementTracker() {
                 <img draggable="false" alt="downarrow" src={downAirButtonClickFlag ? DownClicked : DownArrow} style={{maxWidth: "60px"}}  />
                 </Button>
               </Stack>
-              <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numAir}</Typography>
+              <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numAir}</Typography>
               <img alt="air" className="no-select" draggable="false" src={AirElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
@@ -249,7 +249,7 @@ export function ElementTracker() {
                 <img draggable="false" alt="downarrow" src={downWaterButtonClickFlag ? DownClicked : DownArrow} style={{maxWidth: "60px"}}  />
                 </Button>
               </Stack>
-              <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numWater}</Typography>
+              <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numWater}</Typography>
               <img alt="water" className="no-select" draggable="false" src={WaterElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
@@ -283,7 +283,7 @@ export function ElementTracker() {
                 <img draggable="false" alt="downarrow" src={downMountainButtonClickFlag ? DownClicked : DownArrow} style={{maxWidth: "60px"}}  />
                 </Button>
               </Stack>
-              <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numMountain}</Typography>
+              <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numMountain}</Typography>
               <img alt="mountain" className="no-select" draggable="false" src={MountainElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
@@ -317,7 +317,7 @@ export function ElementTracker() {
                 <img draggable="false" alt="downarrow" src={downLeafButtonClickFlag ? DownClicked : DownArrow} style={{maxWidth: "60px"}}  />
                 </Button>
               </Stack>
-              <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numLeaf}</Typography>
+              <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numLeaf}</Typography>
               <img alt="leaf" className="no-select" draggable="false" src={LeafElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
@@ -351,7 +351,7 @@ export function ElementTracker() {
                 <img draggable="false" alt="downarrow" src={downAnimalButtonClickFlag ? DownClicked : DownArrow} style={{maxWidth: "60px"}}  />
                 </Button>
               </Stack>
-              <Typography className="no-select" sx={{width: '60px', fontSize: '48px', fontFamily: 'cursive'}}>{numAnimal}</Typography>
+              <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numAnimal}</Typography>
               <img alt="animal" className="no-select" draggable="false" src={AnimalElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
