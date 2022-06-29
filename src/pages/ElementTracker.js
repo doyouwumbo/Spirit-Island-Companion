@@ -70,7 +70,7 @@ export function ElementTracker() {
   
   function getElement(name) {
     const data = JSON.parse(window.localStorage.getItem('ELEMENT_STATES'))
-    if (data[name] !== null) return data[name];
+    if (data !== null && data[name] !== null) return data[name];
     return 0; 
   }
 
