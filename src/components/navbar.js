@@ -14,7 +14,7 @@ export function Navbar() {
   const [page, setPage] = useState('element-tracker');
 
   return (
-    <Box sx={{ml: '10px', mt: '10px', mb: '40px', pr:'10px', minWidth: '600px'}}>
+    <Box sx={{ml: '10px', mt: '10px', mb: '10px', pr:'10px', minWidth: '600px'}}>
       <AppBar position="sticky" sx={{background: "transparent", boxShadow: 0}}>
         <Toolbar>
           <Box>

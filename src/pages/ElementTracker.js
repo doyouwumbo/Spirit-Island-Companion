@@ -9,6 +9,7 @@ import WaterElement from '../assets/img/water.png';
 import MountainElement from '../assets/img/mountain.png';
 import LeafElement from '../assets/img/leaf.png';
 import AnimalElement from '../assets/img/animal.png';
+import FearLogo from '../assets/img/Fear.png'
 import UpArrow from '../assets/img/uparrow.svg';
 import DownArrow from '../assets/img/downarrow.svg';
 import UpClicked from '../assets/img/uparrowclicked.svg';
@@ -32,6 +33,7 @@ export function ElementTracker() {
   const [numMountain, setNumMountain] = useState(getElement("numMountain"));
   const [numLeaf, setNumLeaf] = useState(getElement("numLeaf"));
   const [numAnimal, setNumAnimal] = useState(getElement("numAnimal"));
+  const [numFear, setNumFear] = useState(getElement("numFear"));
 
   // Button Flags
   const [upSunButtonClickFlag, setSunUpButtonClickFlag] = useState(false);
@@ -50,6 +52,8 @@ export function ElementTracker() {
   const [downLeafButtonClickFlag, setLeafDownButtonClickFlag] = useState(false);
   const [upAnimalButtonClickFlag, setAnimalUpButtonClickFlag] = useState(false);
   const [downAnimalButtonClickFlag, setAnimalDownButtonClickFlag] = useState(false);
+  const [upFearButtonClickFlag, setFearUpButtonClickFlag] = useState(false);
+  const [downFearButtonClickFlag, setFearDownButtonClickFlag] = useState(false);
   const [resetButtonFlag, setResetButtonFlag] = useState(false);
 
   // Sets elements
@@ -66,7 +70,7 @@ export function ElementTracker() {
   
   function getElement(name) {
     const data = JSON.parse(window.localStorage.getItem('ELEMENT_STATES'))
-    if (data !== null) return data[name];
+    if (data[name] !== null) return data[name];
     return 0; 
   }
 
@@ -80,15 +84,50 @@ export function ElementTracker() {
       "numWater": numWater,
       "numMountain": numMountain,
       "numLeaf": numLeaf,
-      "numAnimal": numAnimal
+      "numAnimal": numAnimal,
+      "numFear": numFear
     }));
-  }, [numSun, numMoon, numFire, numAir, numWater, numMountain, numLeaf, numAnimal]);
+  }, [numSun, numMoon, numFire, numAir, numWater, numMountain, numLeaf, numAnimal, numFear]);
 
   return(
     <Box sx={{minWidth: "600px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
 
+      {/* Fear Button */}
+      <Box sx={{display: 'flex', alignItems: 'center', mb: '10px'}}>
+        <Stack sx={{mr: '10px'}}>
+          <Button sx={{maxWidth: '20px'}} disableRipple={true} 
+          onMouseDown={() => {setFearUpButtonClickFlag(!upFearButtonClickFlag);}}
+          onMouseUp={() => {setFearUpButtonClickFlag(!upFearButtonClickFlag);}}
+          onMouseLeave={() => setFearUpButtonClickFlag(false)}
+          onTouchStart={() => {setFearUpButtonClickFlag(!upFearButtonClickFlag);}}
+          onTouchEnd={() => {setFearUpButtonClickFlag(!upFearButtonClickFlag);}}
+          onTouchCancel={() => setFearUpButtonClickFlag(false)}
+          onClick={() => {setNumFear(numFear + 1)}}
+          disabled={numFear + 1 > 99 ? true : false}
+          >
+            <img draggable="false" alt="uparrow" src={upFearButtonClickFlag ? UpClicked : UpArrow} style={{maxWidth: "60px"}} />
+          </Button>
+
+          <Button sx={{maxWidth: '20px'}} disableRipple={true}
+          onMouseDown={() => {setFearDownButtonClickFlag(!downFearButtonClickFlag);}}
+          onMouseUp={() => {setFearDownButtonClickFlag(!downFearButtonClickFlag);}}
+          onMouseLeave={() => setFearDownButtonClickFlag(false)}
+          onTouchStart={() => {setFearDownButtonClickFlag(!downFearButtonClickFlag);}}
+          onTouchEnd={() => {setFearDownButtonClickFlag(!downFearButtonClickFlag);}}
+          onTouchCancel={() => setFearDownButtonClickFlag(false)}
+          onClick={() => {setNumFear(numFear - 1)}}
+          disabled={numFear - 1 < 0 ? true : false}
+          >
+            <img draggable="false" alt="downarrow" src={downFearButtonClickFlag ? DownClicked : DownArrow} style={{maxWidth: "60px"}}  />
+          </Button>
+        </Stack>
+        <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numFear}</Typography>
+        <img alt="fear" className="no-select" draggable="false" src={FearLogo} style={{maxWidth: 75}}></img>
+      </Box>
+
+
       {/* Reset button */}
-      <Button sx={{width: '250px', height: '70px'}} onClick={resetElements}
+      <Button sx={{width: '250px', height: '70px', mb: '10px'}} onClick={resetElements}
       onMouseDown={() => {setResetButtonFlag(!resetButtonFlag)}}
       onMouseUp={() => {setResetButtonFlag(!resetButtonFlag)}}
       onMouseLeave={() => {setResetButtonFlag(false)}}
@@ -99,8 +138,10 @@ export function ElementTracker() {
       >
         <img style={{width: '250px'}} draggable="false" alt="resetbutton" src={resetButtonFlag ? resetDown : resetNormal} />
       </Button>
-    
-      <Box sx={{mt: '50px',display: "flex", justifyContent: "center", alignItems: "center"}}>
+
+      
+
+      <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
         <Stack spacing={isMobile ? 3 : 5} sx={{mr: "100px"}}>
           <div id='sun'>
             <Box sx={{display: 'flex', alignItems: 'center'}}>
