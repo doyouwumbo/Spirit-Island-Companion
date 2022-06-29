@@ -91,9 +91,25 @@ export function ElementTracker() {
 
   return(
     <Box sx={{minWidth: "600px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
+      <Typography>(Click on an icon to reset its value. The "RESET" button will not reset the fear counter.)</Typography>
 
-      {/* Fear Button */}
-      <Box sx={{display: 'flex', alignItems: 'center', mb: '10px'}}>
+      {/* Reset and Fear button */}
+      <Box sx={{display: 'flex', alignItems: 'center', mb: '20px', mt: '20px'}}>
+
+        {/* Reset button */}
+        <Button sx={{width: '220px', height: '60px', mr: '85px'}} onClick={resetElements}
+        onMouseDown={() => {setResetButtonFlag(!resetButtonFlag)}}
+        onMouseUp={() => {setResetButtonFlag(!resetButtonFlag)}}
+        onMouseLeave={() => {setResetButtonFlag(false)}}
+        onTouchStart={() => {setResetButtonFlag(!resetButtonFlag)}}
+        onTouchEnd={() => {setResetButtonFlag(!resetButtonFlag)}}
+        onTouchCancel={() => {setResetButtonFlag(false)}}
+        disableRipple={true}
+        >
+          <img style={{width: '220px'}} draggable="false" alt="resetbutton" src={resetButtonFlag ? resetDown : resetNormal} />
+        </Button>
+
+        {/* Fear Button */}
         <Stack sx={{mr: '10px'}}>
           <Button sx={{maxWidth: '20px'}} disableRipple={true} 
           onMouseDown={() => {setFearUpButtonClickFlag(!upFearButtonClickFlag);}}
@@ -122,25 +138,10 @@ export function ElementTracker() {
           </Button>
         </Stack>
         <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numFear}</Typography>
-        <img alt="fear" className="no-select" draggable="false" src={FearLogo} style={{maxWidth: 75}}></img>
+        <img alt="fear" className="no-select" draggable="false" src={FearLogo} style={{maxWidth: 75}} onClick={() => {setNumFear(0)}}></img>
       </Box>
 
-
-      {/* Reset button */}
-      <Button sx={{width: '250px', height: '70px', mb: '10px'}} onClick={resetElements}
-      onMouseDown={() => {setResetButtonFlag(!resetButtonFlag)}}
-      onMouseUp={() => {setResetButtonFlag(!resetButtonFlag)}}
-      onMouseLeave={() => {setResetButtonFlag(false)}}
-      onTouchStart={() => {setResetButtonFlag(!resetButtonFlag)}}
-      onTouchEnd={() => {setResetButtonFlag(!resetButtonFlag)}}
-      onTouchCancel={() => {setResetButtonFlag(false)}}
-      disableRipple={true}
-      >
-        <img style={{width: '250px'}} draggable="false" alt="resetbutton" src={resetButtonFlag ? resetDown : resetNormal} />
-      </Button>
-
-      
-
+      {/* Elements Stacks */}
       <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
         <Stack spacing={isMobile ? 3 : 5} sx={{mr: "100px"}}>
           <div id='sun'>
@@ -173,7 +174,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numSun}</Typography>
-              <img alt="sun" className="no-select" draggable="false" src={SunElement} style={{maxWidth: 75}}></img>
+              <img alt="sun" className="no-select" onClick={() => {setNumSun(0)}} draggable="false" src={SunElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -207,7 +208,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numMoon}</Typography>
-              <img alt="moon" className="no-select" draggable="false" src={MoonElement} style={{maxWidth: 75}}></img>
+              <img alt="moon" onClick={() => {setNumMoon(0)}} className="no-select" draggable="false" src={MoonElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -241,7 +242,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numFire}</Typography>
-              <img alt="fire" className="no-select" draggable="false" src={FireElement} style={{maxWidth: 75}}></img>
+              <img alt="fire" onClick={() => {setNumFire(0)}} className="no-select" draggable="false" src={FireElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -275,7 +276,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numAir}</Typography>
-              <img alt="air" className="no-select" draggable="false" src={AirElement} style={{maxWidth: 75}}></img>
+              <img alt="air" onClick={() => {setNumAir(0)}} className="no-select" draggable="false" src={AirElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
         </Stack>
@@ -312,7 +313,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numWater}</Typography>
-              <img alt="water" className="no-select" draggable="false" src={WaterElement} style={{maxWidth: 75}}></img>
+              <img alt="water" onClick={() => {setNumWater(0)}} className="no-select" draggable="false" src={WaterElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -346,7 +347,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numMountain}</Typography>
-              <img alt="mountain" className="no-select" draggable="false" src={MountainElement} style={{maxWidth: 75}}></img>
+              <img alt="mountain" onClick={() => {setNumMountain(0)}} className="no-select" draggable="false" src={MountainElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -380,7 +381,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numLeaf}</Typography>
-              <img alt="leaf" className="no-select" draggable="false" src={LeafElement} style={{maxWidth: 75}}></img>
+              <img alt="leaf" onClick={() => {setNumLeaf(0)}} className="no-select" draggable="false" src={LeafElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
 
@@ -414,7 +415,7 @@ export function ElementTracker() {
                 </Button>
               </Stack>
               <Typography className="no-select" sx={{width: '60px', fontSize: '48px'}}>{numAnimal}</Typography>
-              <img alt="animal" className="no-select" draggable="false" src={AnimalElement} style={{maxWidth: 75}}></img>
+              <img alt="animal" onClick={() => {setNumAnimal(0)}} className="no-select" draggable="false" src={AnimalElement} style={{maxWidth: 75}}></img>
             </Box>
           </div>
         </Stack>
