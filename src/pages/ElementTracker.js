@@ -16,7 +16,7 @@ import DownClicked from '../assets/img/downarrowclicked.svg';
 import resetNormal from '../assets/img/resetnormal.svg';
 import resetDown from '../assets/img/reset.svg';
 import { Button } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {isMobile} from 'react-device-detect'
 import '../index.css';
 
@@ -24,14 +24,14 @@ import '../index.css';
 export function ElementTracker() {
 
   // Number of each element
-  const [numSun, setNumSun] = useState(0);
-  const [numMoon, setNumMoon] = useState(0);
-  const [numFire, setNumFire] = useState(0);
-  const [numAir, setNumAir] = useState(0);
-  const [numWater, setNumWater] = useState(0);
-  const [numMountain, setNumMountain] = useState(0);
-  const [numLeaf, setNumLeaf] = useState(0);
-  const [numAnimal, setNumAnimal] = useState(0);
+  const [numSun, setNumSun] = useState(getElement("numSun"));
+  const [numMoon, setNumMoon] = useState(getElement("numMoon"));
+  const [numFire, setNumFire] = useState(getElement("numFire"));
+  const [numAir, setNumAir] = useState(getElement("numAir"));
+  const [numWater, setNumWater] = useState(getElement("numWater"));
+  const [numMountain, setNumMountain] = useState(getElement("numMountain"));
+  const [numLeaf, setNumLeaf] = useState(getElement("numLeaf"));
+  const [numAnimal, setNumAnimal] = useState(getElement("numAnimal"));
 
   // Button Flags
   const [upSunButtonClickFlag, setSunUpButtonClickFlag] = useState(false);
@@ -52,6 +52,7 @@ export function ElementTracker() {
   const [downAnimalButtonClickFlag, setAnimalDownButtonClickFlag] = useState(false);
   const [resetButtonFlag, setResetButtonFlag] = useState(false);
 
+  // Sets elements
   function resetElements() {
     setNumSun(0);
     setNumMoon(0);
@@ -62,6 +63,26 @@ export function ElementTracker() {
     setNumLeaf(0);
     setNumAnimal(0);
   }
+  
+  function getElement(name) {
+    const data = JSON.parse(window.localStorage.getItem('ELEMENT_STATES'))
+    if (data !== null) return data[name];
+    return 0; 
+  }
+
+  // If any element value changes, save its state to the browser local storage
+  useEffect(() => {
+    window.localStorage.setItem('ELEMENT_STATES', JSON.stringify({
+      "numSun": numSun,
+      "numMoon": numMoon,
+      "numFire":  numFire,
+      "numAir": numAir,
+      "numWater": numWater,
+      "numMountain": numMountain,
+      "numLeaf": numLeaf,
+      "numAnimal": numAnimal
+    }));
+  }, [numSun, numMoon, numFire, numAir, numWater, numMountain, numLeaf, numAnimal]);
 
   return(
     <Box sx={{minWidth: "600px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
