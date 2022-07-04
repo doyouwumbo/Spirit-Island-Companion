@@ -1,16 +1,18 @@
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import {React, useRef} from "react";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
-import RiverFront from '../assets/spirits/RiverFront.png';
-import RiverBack from '../assets/spirits/RiverBack.png';
+import { BrowserView, MobileView } from 'react-device-detect';
+import RiverFront from '../assets/spirits/river/RiverFront.png';
+import RiverBack from '../assets/spirits/river/RiverBack.png';
+import FlashFloods from '../assets/spirits/river/FlashFloods.png';
 
 export function RiverSurgesInSunlight() {
 
   const ref = useRef();
 
   return(
-    <Box sx={{minWidth: "600px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
-      
+    <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: 'column'}}>
+
       <Flippy
       flipOnHover={false}
       flipOnClick={true}
@@ -24,6 +26,20 @@ export function RiverSurgesInSunlight() {
         <img alt="" src={RiverBack} style={{width: '600px'}}/>
         </BackSide>
       </Flippy>
+      <Stack direction="row" spacing={3} sx={{mt: '25px'}}>
+        <img alt="flash floods" src={FlashFloods} style={{width: '200px'}} />
+        <img alt="flash floods" src={FlashFloods} style={{width: '200px'}} />
+        <BrowserView>
+          <img alt="flash floods" src={FlashFloods} style={{width: '200px'}} />
+          <img alt="flash floods" src={FlashFloods} style={{width: '200px'}} />
+        </BrowserView>
+      </Stack>
+      <MobileView>
+        <Stack direction="row" spacing={3} sx={{mt: '10px'}}>
+          <img alt="flash floods" src={FlashFloods} style={{width: '200px'}} />
+          <img alt="flash floods" src={FlashFloods} style={{width: '200px'}} />
+        </Stack>
+      </MobileView>
     </Box>
   );
 }

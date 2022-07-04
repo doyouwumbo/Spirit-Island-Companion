@@ -11,7 +11,7 @@ export function Spirits() {
   }
 
   return (
-    <Box sx={{minWidth: "600px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
+    <Box sx={{minWidth: "700px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
       <Button variant="contained" sx={{backgroundColor: '#62542e', "&:hover": {backgroundColor: '#9f8b55'}}} 
       onClick={() => {
         handleClick('river-surges-in-sunlight')
