@@ -1,7 +1,8 @@
 import './App.css';
-import { Welcome } from './pages/welcome';
+import { Spirits } from './pages/Spirits';
 import {Navbar} from './components/navbar';
 import {ElementTracker} from "./pages/ElementTracker";
+import { RiverSurgesInSunlight } from './pages/RiverSurgesInSunlight';
 import { BrowserRouter as Router, Route, Navigate, Routes } from "react-router-dom";
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
           <Navbar/>
             <Routes>
               <Route exact path="/" element={<Navigate to="/element-tracker" />} />
-              <Route path="/welcome" element={<Welcome />}/>
+              <Route path="/spirits" element={<Spirits />}/>
               <Route path="/element-tracker" element={<ElementTracker />} />
+              <Route path="/spirits/river-surges-in-sunlight" element={<RiverSurgesInSunlight />}></Route>
             </Routes>
       </Router>
   );

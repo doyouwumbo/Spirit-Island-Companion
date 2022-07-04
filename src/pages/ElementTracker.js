@@ -91,7 +91,7 @@ export function ElementTracker() {
 
   return(
     <Box sx={{minWidth: "600px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
-      <Typography>(Click on an icon to reset its value. The "RESET" button will not reset fear.)</Typography>
+      <Typography sx={{color: '#9a7c2b'}}>(Click on an icon to reset its value. The "RESET" button will not reset fear.)</Typography>
 
       {/* Reset and Fear button */}
       <Box sx={{display: 'flex', alignItems: 'center', mb: '20px', mt: '20px'}}>
