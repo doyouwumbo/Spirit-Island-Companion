@@ -38,14 +38,14 @@ export function RiverSurgesInSunlight() {
       {/* Unique spirit cards */}
 
       <BrowserView>
-          <Typography sx={{fontSize: '32px', mt: '25px'}}>Unique Power Cards</Typography>
+          <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Unique Power Cards</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center'}}>
             <img alt="flash floods" src={FlashFloods} style={{width: '200px'}} />
             <img alt="wash away" src={WashAway} style={{width: '200px'}} />
             <img alt="boon of vigor" src={BoonOfVigor} style={{width: '200px'}} />
             <img alt="rivers bounty" src={RiversBounty} style={{width: '200px'}} />
           </Stack>
-          <Typography sx={{fontSize: '32px', mt: '25px'}}>Aspects</Typography>
+          <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Aspects</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center', mb: '25px'}}>
             <img alt="sunshine" src={Sunshine} style={{width: '350px'}} />
             <img alt="travel" src={Travel} style={{width: '350px'}} />
@@ -54,7 +54,7 @@ export function RiverSurgesInSunlight() {
 
 
       <MobileView>
-        <Typography sx={{fontSize: '32px', mt: '10px'}}>Unique Power Cards</Typography>
+        <Typography sx={{fontSize: '32px', mt: '10px'}}><b>Unique Power Cards</b></Typography>
         <Stack direction="row" spacing={3} sx={{mt: '10px', justifyContent: 'center'}}>
           <img alt="flash floods" src={FlashFloods} style={{width: '200px'}} />
           <img alt="wash away" src={WashAway} style={{width: '200px'}} />
@@ -63,7 +63,7 @@ export function RiverSurgesInSunlight() {
           <img alt="boon of vigor" src={BoonOfVigor} style={{width: '200px'}} />
           <img alt="rivers bounty" src={RiversBounty} style={{width: '200px'}} />
         </Stack>
-        <Typography sx={{fontSize: '32px', mt: '10px'}}>Aspects</Typography>
+        <Typography sx={{fontSize: '32px', mt: '10px'}}><b>Aspects</b></Typography>
         <Stack direction="row" spacing={3} sx={{mt: '10px', justifyContent: 'center', mb: '10px'}}>
           <img alt="sunshine" src={Sunshine} style={{width: '275px'}} />
           <img alt="travel" src={Travel} style={{width: '275px'}} />

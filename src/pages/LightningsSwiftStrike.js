@@ -39,14 +39,14 @@ export function LightningsSwiftStrike() {
       {/* Unique spirit cards */}
 
       <BrowserView>
-          <Typography sx={{fontSize: '32px', mt: '25px'}}>Unique Power Cards</Typography>
+          <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Unique Power Cards</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center'}}>
             <img alt="ShatterHomesteads" src={ShatterHomesteads} style={{width: '200px'}} />
             <img alt="RagingStorm" src={RagingStorm} style={{width: '200px'}} />
             <img alt="LightningsBoon" src={LightningsBoon} style={{width: '200px'}} />
             <img alt="Harbingers" src={Harbingers} style={{width: '200px'}} />
           </Stack>
-          <Typography sx={{fontSize: '32px', mt: '25px'}}>Aspects</Typography>
+          <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Aspects</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center', mb: '25px'}}>
             <img alt="Immense" src={Immense} style={{width: '350px'}} />
             <img alt="Pandemonium" src={Pandemonium} style={{width: '350px'}} />
@@ -56,7 +56,7 @@ export function LightningsSwiftStrike() {
 
 
       <MobileView>
-        <Typography sx={{fontSize: '32px', mt: '10px'}}>Unique Power Cards</Typography>
+        <Typography sx={{fontSize: '32px', mt: '10px'}}><b>Unique Power Cards</b></Typography>
         <Stack direction="row" spacing={3} sx={{mt: '10px', justifyContent: 'center'}}>
           <img alt="ShatterHomesteads" src={ShatterHomesteads} style={{width: '200px'}} />
           <img alt="RagingStorm" src={RagingStorm} style={{width: '200px'}} />
@@ -65,13 +65,13 @@ export function LightningsSwiftStrike() {
           <img alt="LightningsBoon" src={LightningsBoon} style={{width: '200px'}} />
           <img alt="Harbingers" src={Harbingers} style={{width: '200px'}} />
         </Stack>
-        <Typography sx={{fontSize: '32px', mt: '10px'}}>Aspects</Typography>
+        <Typography sx={{fontSize: '32px', mt: '10px'}}><b>Aspects</b></Typography>
         <Stack direction="row" spacing={3} sx={{mt: '10px', justifyContent: 'center', mb: '10px'}}>
           <img alt="Immense" src={Immense} style={{width: '275px'}} />
           <img alt="Pandemonium" src={Pandemonium} style={{width: '275px'}} />
         </Stack>
         <Box sx={{mt: '10px', justifyContent: 'center', mb: '10px'}}>
-          <img alt="Wind" src={Wind} style={{width: '275px'}} onClick={{}} />
+          <img alt="Wind" src={Wind} style={{width: '275px'}} />
         </Box>
       </MobileView>
     </Box>
