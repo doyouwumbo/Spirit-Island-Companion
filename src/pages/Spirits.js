@@ -1,5 +1,6 @@
 import { Box, Button, Typography, Stack } from "@mui/material";
 import { styled } from "@mui/system";
+import {isMobile} from 'react-device-detect'
 import RiverProfile from '../assets/spirits/river/profile.png';
 import LightningProfile from '../assets/spirits/lightning/profile.png';
 import ShadowProfile from '../assets/spirits/shadows/profile.png'
@@ -10,6 +11,8 @@ import { useNavigate } from "react-router-dom";
 export function Spirits() {
 
   const navigate = useNavigate();
+
+  const space = ifMobile();
 
   function handleClick(name) {
     navigate('/spirits/' + name);
@@ -22,9 +25,17 @@ export function Spirits() {
     alignItems: 'center',
   })
 
+  function ifMobile() {
+    console.log(isMobile)
+    if (isMobile) {
+      return 6;
+    }
+    return 15
+  }
+
   return (
     <Box sx={{minWidth: "700px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
-      <Stack direction="row" spacing={15}>
+      <Stack direction="row" spacing={space}>
 
         {/* River Surges In Sunlight */}
         <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#40b296'}}>
@@ -51,7 +62,7 @@ export function Spirits() {
         </SpiritStack>
       </Stack>
 
-      <Stack direction="row" spacing={15} sx={{mt: '25px'}}>
+      <Stack direction="row" spacing={space} sx={{mt: '25px'}}>
 
         {/* Shadows Flicker Like Flame */}
         <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#57868c'}}>
