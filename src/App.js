@@ -9,6 +9,11 @@ import { VitalStrengthOfTheEarth } from './pages/VitalStrengthOfTheEarth';
 import { BrowserRouter as Router, Route, Navigate, Routes } from "react-router-dom";
 
 function App() {
+
+  window.addEventListener("beforeunload", function(e){
+    window.localStorage.removeItem('NAVBAR_TAB');
+  }, false);
+
   return (
       <Router basename="/Spirit-Island-Companion">
           <Navbar/>
