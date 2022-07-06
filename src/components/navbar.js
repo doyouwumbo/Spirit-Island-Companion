@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {React, useState, useEffect} from "react";
 import {ToggleButtonGroup, ToggleButton} from '@mui/material';
 import {AppBar} from '@mui/material';
 import {Toolbar} from '@mui/material';
@@ -11,7 +11,13 @@ export function Navbar() {
 
   const navigate = useNavigate();
 
-  const [page, setPage] = useState('element-tracker');
+  const [page, setPage] = useState(() => {
+    let data = window.localStorage.getItem('NAVBAR_TAB');
+    if (data === null) {
+      return 'element-tracker';
+    }
+    return data;
+  });
 
   const NavButton = styled(ToggleButton)({
     borderTop: 0,
@@ -19,7 +25,11 @@ export function Navbar() {
     borderLeft: 0,
     marginRight: 20,
     borderRadius: 0
-  })
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem('NAVBAR_TAB', page);
+  }, [page])
 
   return (
     <Box sx={{ml: '10px', mt: '10px', mb: '10px', pr:'10px', minWidth: '600px'}}>
