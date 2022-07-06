@@ -17,7 +17,7 @@ export function ShadowsFlickerLikeFlame() {
 
   const ref = useRef();
 
-  document.body.style = 'background: #57868c';
+  window.requestAnimationFrame(()=> { document.body.style = 'background-color: #768a8c; transition: background-color 3s;'})
 
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>

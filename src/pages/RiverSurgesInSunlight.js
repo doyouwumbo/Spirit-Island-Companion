@@ -15,7 +15,7 @@ export function RiverSurgesInSunlight() {
 
   const ref = useRef();
   
-  document.body.style = 'background: #40b296';
+  window.requestAnimationFrame(()=> { document.body.style = 'background-color: #7fb5a8; transition: background-color 3s;'})
 
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>

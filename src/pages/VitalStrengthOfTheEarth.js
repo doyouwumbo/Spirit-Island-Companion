@@ -15,7 +15,7 @@ export function VitalStrengthOfTheEarth() {
 
   const ref = useRef();
 
-  document.body.style = 'background: #b8906c';
+  window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ba9d82; transition: background-color 3s;'})
 
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>

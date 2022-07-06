@@ -89,7 +89,7 @@ export function ElementTracker() {
     }));
   }, [numSun, numMoon, numFire, numAir, numWater, numMountain, numLeaf, numAnimal, numFear]);
 
-  document.body.style = 'background: #ffdf85';
+  window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'});
 
   return(
     <Box sx={{minWidth: "700px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>

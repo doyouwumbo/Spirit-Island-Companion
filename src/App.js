@@ -10,9 +10,10 @@ import { BrowserRouter as Router, Route, Navigate, Routes } from "react-router-d
 
 function App() {
 
-  window.addEventListener("beforeunload", function(e){
-    window.localStorage.removeItem('NAVBAR_TAB');
-  }, false);
+  // Clear which tab was last activated 
+  // window.addEventListener("beforeunload", function(e){
+  //   window.localStorage.removeItem('NAVBAR_TAB');
+  // }, false);
 
   return (
       <Router basename="/Spirit-Island-Companion">

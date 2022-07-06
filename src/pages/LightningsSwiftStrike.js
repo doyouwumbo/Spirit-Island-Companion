@@ -16,7 +16,7 @@ export function LightningsSwiftStrike() {
 
   const ref = useRef();
 
-  document.body.style = 'background: #fd822f';
+  window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffa163; transition: background-color 3s;'})
 
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>

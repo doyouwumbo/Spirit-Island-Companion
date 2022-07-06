@@ -32,7 +32,7 @@ export function Spirits() {
     return 15
   }
 
-  document.body.style = 'background: #ffdf85';
+  window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'});
 
   return (
     <Box sx={{minWidth: "700px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
@@ -40,11 +40,13 @@ export function Spirits() {
 
         {/* River Surges In Sunlight */}
         <Fade in={true} style={{transitionDelay: "0.2s"}}>
-          <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#40b296'}}>
+          <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#7fb5a8'}}>
             <Button
             onClick={() => {
               handleClick('river-surges-in-sunlight')
             }}
+            onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #7fb5a8; transition: background-color 3s;'})}}
+            onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
             >
               <img alt="river" src={RiverProfile} style={{maxWidth: '150px', borderRadius: 16}} />
             </Button>
@@ -54,11 +56,13 @@ export function Spirits() {
 
         {/* Lightning's Swift Strike */}
         <Fade in={true} style={{transitionDelay: "0.3s"}}>
-          <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#fd822f'}}>
+          <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#ffa163'}}>
             <Button
             onClick={() => {
               handleClick('lightnings-swift-strike')
             }}
+            onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffa163; transition: background-color 3s;'})}}
+            onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
             >
               <img alt="lightning" src={LightningProfile} style={{maxWidth: '150px', borderRadius: 16}} />
             </Button>
@@ -71,11 +75,13 @@ export function Spirits() {
 
         {/* Shadows Flicker Like Flame */}
         <Fade in={true} style={{transitionDelay: "0.4s"}}>
-          <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#57868c'}}>
+          <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#768a8c'}}>
             <Button
             onClick={() => {
               handleClick('shadows-flicker-like-flames')
             }}
+            onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #768a8c; transition: background-color 3s;'})}}
+            onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
             >
               <img alt="shadow" src={ShadowProfile} style={{maxWidth: '150px', borderRadius: 16}} />
             </Button>
@@ -85,11 +91,13 @@ export function Spirits() {
 
         {/* Vital Strength of the Earth */}
         <Fade in={true} style={{transitionDelay: "0.5s"}}>
-          <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#b8906c'}}>
+          <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#ba9d82'}}>
             <Button
             onClick={() => {
               handleClick('vital-strength-of-the-earth')
             }}
+            onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ba9d82; transition: background-color 3s;'})}}
+            onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
             >
               <img alt="vital" src={VitalProfile} style={{maxWidth: '150px', borderRadius: 16}} />
             </Button>
