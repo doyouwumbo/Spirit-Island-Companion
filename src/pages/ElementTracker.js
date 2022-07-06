@@ -89,6 +89,8 @@ export function ElementTracker() {
     }));
   }, [numSun, numMoon, numFire, numAir, numWater, numMountain, numLeaf, numAnimal, numFear]);
 
+  document.body.style = 'background: #ffdf85';
+
   return(
     <Box sx={{minWidth: "700px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
       <Typography sx={{color: '#9a7c2b'}}>(Click on an icon to reset its value. The "RESET" button will not reset fear.)</Typography>

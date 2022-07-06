@@ -14,10 +14,12 @@ import Travel from '../assets/spirits/river/Travel.png';
 export function RiverSurgesInSunlight() {
 
   const ref = useRef();
+  
+  document.body.style = 'background: #40b296';
 
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>
-      <Typography sx={{fontSize: '16px', color: '#9a7c2b'}}>(You can {isMobile ? "tap" : "click"} on the spirit card to flip it over!)</Typography>
+      <Typography sx={{fontSize: '16px', color: 'black'}}>(You can {isMobile ? "tap" : "click"} on the spirit card to flip it over!)</Typography>
       {/* Spirit Character Card */}
         <Flippy
         flipOnHover={false}

@@ -15,9 +15,11 @@ export function VitalStrengthOfTheEarth() {
 
   const ref = useRef();
 
+  document.body.style = 'background: #b8906c';
+
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>
-      <Typography sx={{fontSize: '16px', color: '#9a7c2b'}}>(You can {isMobile ? "tap" : "click"} on the spirit card to flip it over!)</Typography>
+      <Typography sx={{fontSize: '16px', color: 'black'}}>(You can {isMobile ? "tap" : "click"} on the spirit card to flip it over!)</Typography>
       {/* Spirit Character Card */}
         <Flippy
         flipOnHover={false}

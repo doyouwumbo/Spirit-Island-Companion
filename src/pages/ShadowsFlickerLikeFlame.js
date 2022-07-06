@@ -17,9 +17,11 @@ export function ShadowsFlickerLikeFlame() {
 
   const ref = useRef();
 
+  document.body.style = 'background: #57868c';
+
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>
-      <Typography sx={{fontSize: '16px', color: '#9a7c2b'}}>(You can {isMobile ? "tap" : "click"} on the spirit card to flip it over!)</Typography>
+      <Typography sx={{fontSize: '16px', color: 'black'}}>(You can {isMobile ? "tap" : "click"} on the spirit card to flip it over!)</Typography>
       {/* Spirit Character Card */}
         <Flippy
         flipOnHover={false}
@@ -72,7 +74,7 @@ export function ShadowsFlickerLikeFlame() {
           <img alt="Foreboding" src={Foreboding} style={{width: '275px'}} />
           <img alt="Madness" src={Madness} style={{width: '275px'}} />
         </Stack>
-        <Stack direction="row" spacing={3} sx={{mt: '10px', justifyContent: 'center'}}>
+        <Stack direction="row" spacing={3} sx={{mt: '10px', justifyContent: 'center', mb: '10px'}}>
           <img alt="Amorphous" src={Amorphous} style={{width: '275px'}} />
           <img alt="Reach" src={Reach} style={{width: '275px'}} />
         </Stack>

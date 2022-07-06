@@ -49,8 +49,8 @@ export function Navbar() {
                 navigate('/' + page);
               }
             }}>
-              <NavButton value='element-tracker' aria-label='element-tracker'>Element Tracker</NavButton>
-              <NavButton value='spirits' aria-label='spirits'>Spirits</NavButton>
+              <NavButton value='element-tracker' aria-label='element-tracker'><b>Element Tracker</b></NavButton>
+              <NavButton value='spirits' aria-label='spirits'><b>Spirits</b></NavButton>
             </ToggleButtonGroup>
           </Box>
         </Toolbar>

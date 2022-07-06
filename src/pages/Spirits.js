@@ -32,6 +32,8 @@ export function Spirits() {
     return 15
   }
 
+  document.body.style = 'background: #ffdf85';
+
   return (
     <Box sx={{minWidth: "700px", display: "flex", alignItems: "center", flexDirection: 'column', margin: 'auto'}}>
       <Stack direction="row" spacing={space}>
