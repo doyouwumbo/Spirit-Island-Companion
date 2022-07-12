@@ -6,6 +6,7 @@ import { RiverSurgesInSunlight } from './pages/RiverSurgesInSunlight';
 import { LightningsSwiftStrike } from './pages/LightningsSwiftStrike';
 import { ShadowsFlickerLikeFlame } from './pages/ShadowsFlickerLikeFlame'
 import { VitalStrengthOfTheEarth } from './pages/VitalStrengthOfTheEarth';
+import { Thunderspeaker } from './pages/Thunderspeaker';
 import { BrowserRouter as Router, Route, Navigate, Routes } from "react-router-dom";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <Route path="/spirits/lightnings-swift-strike" element={<LightningsSwiftStrike />}></Route>
               <Route path="/spirits/shadows-flicker-like-flames" element={<ShadowsFlickerLikeFlame />}></Route>
               <Route path="/spirits/vital-strength-of-the-earth" element={<VitalStrengthOfTheEarth />}></Route>
+              <Route path="/spirits/thunderspeaker" element={<Thunderspeaker />}></Route>
             </Routes>
       </Router>
   );

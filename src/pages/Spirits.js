@@ -5,6 +5,7 @@ import RiverProfile from '../assets/spirits/river/profile.png';
 import LightningProfile from '../assets/spirits/lightning/profile.png';
 import ShadowProfile from '../assets/spirits/shadows/profile.png';
 import VitalProfile from '../assets/spirits/vital/profile.png';
+import ThunderspeakerProfile from '../assets/spirits/thunderspeaker/profile.png';
 import "../index.css";
 import { useNavigate } from "react-router-dom";
 
@@ -106,6 +107,26 @@ export function Spirits() {
         </Fade>
 
       </Stack>
+
+      <Stack direction="row" spacing={space} sx={{mt: '25px'}}>
+
+        {/* Thunderspeaker */}
+        <Fade in={true} style={{transitionDelay: "0.6s"}}>
+          <SpiritStack sx={{border: 1, borderWidth: 3, borderRadius: 4, backgroundColor: '#588463'}}>
+            <Button
+            onClick={() => {
+              handleClick('thunderspeaker')
+            }}
+            onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #588463; transition: background-color 3s;'})}}
+            onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+            >
+              <img alt="vital" src={ThunderspeakerProfile} style={{maxWidth: '150px', borderRadius: 16}} />
+            </Button>
+            <Typography><b>THUNDERSPEAKER</b></Typography>
+          </SpiritStack>
+        </Fade>
+      </Stack>
+
     </Box>
   );
 }
