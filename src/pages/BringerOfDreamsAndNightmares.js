@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import {React, useRef} from "react";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import { BrowserView, MobileView, isMobile } from 'react-device-detect';
+import { HoverGrow } from "../components/HoverGrow";
 import BringerFront from '../assets/spirits/bringer/BringerFront.jpg';
 import BringerBack from '../assets/spirits/bringer/BringerBack.jpg';
 import DreadApparitions from '../assets/spirits/bringer/DreadApparitions.png';
@@ -17,8 +18,11 @@ export function BringerOfDreamsAndNightmares() {
 
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>
-      <Typography sx={{fontSize: '16px', color: 'black'}}>(You can {isMobile ? "tap" : "click"} on the spirit card to flip it over!)</Typography>
+      <Typography sx={{fontSize: '16px', color: 'black'}}>
+        (You can {isMobile ? "tap" : "click"} on the spirit card to flip it over! {!isMobile ? "Hover over a spirit's card to make it bigger!" : ""})
+      </Typography>
       {/* Spirit Character Card */}
+      
         <Flippy
         flipOnHover={false}
         flipOnClick={true}
@@ -33,6 +37,7 @@ export function BringerOfDreamsAndNightmares() {
             <img alt="" src={BringerBack} style={{width: '650px'}}/>
           </BackSide>
         </Flippy>
+      
         
 
       {/* Unique spirit cards */}
@@ -40,10 +45,10 @@ export function BringerOfDreamsAndNightmares() {
       <BrowserView>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Unique Power Cards</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center'}}>
-            <img alt="flash floods" src={DreadApparitions} style={{width: '200px'}} />
-            <img alt="wash away" src={DreamsOfTheDahan} style={{width: '200px'}} />
-            <img alt="boon of vigor" src={CallOnMidnightsDream} style={{width: '200px'}} />
-            <img alt="rivers bounty" src={PredatoryNightmares} style={{width: '200px'}} />
+            <HoverGrow translate={100}><img alt="flash floods" src={DreadApparitions} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translate={100}><img alt="wash away" src={DreamsOfTheDahan} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translate={100}><img alt="boon of vigor" src={CallOnMidnightsDream} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translate={100}><img alt="rivers bounty" src={PredatoryNightmares} style={{width: '200px'}} /></HoverGrow>
           </Stack>
       </BrowserView>
 

@@ -1,7 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material";
-import {React, useRef} from "react";
+import {React, useRef } from "react";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import { BrowserView, MobileView, isMobile } from 'react-device-detect';
+import { HoverGrow } from "../components/HoverGrow";
 import RiverFront from '../assets/spirits/river/RiverFront.png';
 import RiverBack from '../assets/spirits/river/RiverBack.png';
 import FlashFloods from '../assets/spirits/river/FlashFloods.png';
@@ -10,6 +11,7 @@ import BoonOfVigor from '../assets/spirits/river/BoonOfVigor.png';
 import RiversBounty from '../assets/spirits/river/RiversBounty.png';
 import Sunshine from '../assets/spirits/river/Sunshine.png'; 
 import Travel from '../assets/spirits/river/Travel.png';
+import '../spirits.css';
 
 export function RiverSurgesInSunlight() {
 
@@ -19,7 +21,9 @@ export function RiverSurgesInSunlight() {
 
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>
-      <Typography sx={{fontSize: '16px', color: 'black'}}>(You can {isMobile ? "tap" : "click"} on the spirit card to flip it over!)</Typography>
+      <Typography sx={{fontSize: '16px', color: 'black'}}>
+        (You can {isMobile ? "tap" : "click"} on the spirit card to flip it over! {!isMobile ? "Hover over a spirit's card to make it bigger!" : ""})
+      </Typography>
       {/* Spirit Character Card */}
         <Flippy
         flipOnHover={false}
@@ -42,15 +46,16 @@ export function RiverSurgesInSunlight() {
       <BrowserView>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Unique Power Cards</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center'}}>
-            <img alt="flash floods" src={FlashFloods} style={{width: '200px'}} />
-            <img alt="wash away" src={WashAway} style={{width: '200px'}} />
-            <img alt="boon of vigor" src={BoonOfVigor} style={{width: '200px'}} />
-            <img alt="rivers bounty" src={RiversBounty} style={{width: '200px'}} />
+            <HoverGrow><img alt="flash floods" src={FlashFloods} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow><img alt="wash away" src={WashAway} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow><img alt="boon of vigor" src={BoonOfVigor} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow><img alt="rivers bounty" src={RiversBounty} style={{width: '200px'}} /></HoverGrow>
+
           </Stack>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Aspects</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center', mb: '25px'}}>
-            <img alt="sunshine" src={Sunshine} style={{width: '350px'}} />
-            <img alt="travel" src={Travel} style={{width: '350px'}} />
+            <HoverGrow translate={100}><img alt="sunshine" src={Sunshine} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translate={100}><img alt="travel" src={Travel} style={{width: '350px'}} /></HoverGrow>
           </Stack>
       </BrowserView>
 

@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import {React, useRef} from "react";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import { BrowserView, MobileView, isMobile } from 'react-device-detect';
+import { HoverGrow } from "../components/HoverGrow";
 import RampantFront from '../assets/spirits/rampant/RampantFront.jpg';
 import RampantBack from '../assets/spirits/rampant/RampantBack.jpg';
 import OvergrowInANight from '../assets/spirits/rampant/OvergrowInANight.png';
@@ -17,7 +18,9 @@ export function RampantSpreadOfGreen() {
 
   return(
     <Box sx={{minWidth: "700px", display: "flex", justifyContent: 'center', alignItems: "center", textAlign: 'center', flexDirection: 'column'}}>
-      <Typography sx={{fontSize: '16px', color: 'black'}}>(You can {isMobile ? "tap" : "click"} on the spirit card to flip it over!)</Typography>
+      <Typography sx={{fontSize: '16px', color: 'black'}}>
+        (You can {isMobile ? "tap" : "click"} on the spirit card to flip it over! {!isMobile ? "Hover over a spirit's card to make it bigger!" : ""})
+      </Typography>
       {/* Spirit Character Card */}
         <Flippy
         flipOnHover={false}
@@ -40,10 +43,10 @@ export function RampantSpreadOfGreen() {
       <BrowserView>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Unique Power Cards</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center'}}>
-            <img alt="flash floods" src={OvergrowInANight} style={{width: '200px'}} />
-            <img alt="wash away" src={FieldsChokedWithGrowth} style={{width: '200px'}} />
-            <img alt="boon of vigor" src={GiftOfProliferation} style={{width: '200px'}} />
-            <img alt="rivers bounty" src={StemTheFlowOfFreshWater} style={{width: '200px'}} />
+            <HoverGrow translate={100}><img alt="flash floods" src={OvergrowInANight} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translate={100}><img alt="wash away" src={FieldsChokedWithGrowth} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translate={100}><img alt="boon of vigor" src={GiftOfProliferation} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translate={100}><img alt="rivers bounty" src={StemTheFlowOfFreshWater} style={{width: '200px'}} /></HoverGrow>
           </Stack>
       </BrowserView>
 
