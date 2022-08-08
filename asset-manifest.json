@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Spirit-Island-Companion/static/css/main.867442f3.css",
-    "main.js": "/Spirit-Island-Companion/static/js/main.5c1dd88f.js",
+    "main.js": "/Spirit-Island-Companion/static/js/main.648440d1.js",
     "static/js/787.28cb0dcd.chunk.js": "/Spirit-Island-Companion/static/js/787.28cb0dcd.chunk.js",
     "static/media/RiverFront.png": "/Spirit-Island-Companion/static/media/RiverFront.5ef1b3b6f1aa7c874ed6.png",
     "static/media/ShadowFront.png": "/Spirit-Island-Companion/static/media/ShadowFront.d1060e9da65cf3a8417d.png",
@@ -27,7 +27,7 @@
     "static/media/BoonOfVigor.png": "/Spirit-Island-Companion/static/media/BoonOfVigor.4ca347098453b6b6454f.png",
     "static/media/StemTheFlowOfFreshWater.png": "/Spirit-Island-Companion/static/media/StemTheFlowOfFreshWater.08d1d152a332eb56a7a6.png",
     "static/media/WordsOfWarning.png": "/Spirit-Island-Companion/static/media/WordsOfWarning.0aebedd13e826ddf9618.png",
-    "static/media/LightningsBoon.png": "/Spirit-Island-Companion/static/media/LightningsBoon.ca033375236cf15bcaa4.png",
+    "static/media/LightningsBoon.png": "/Spirit-Island-Companion/static/media/LightningsBoon.00cdfccc5819874a414a.png",
     "static/media/RiversBounty.png": "/Spirit-Island-Companion/static/media/RiversBounty.f2ca3318afd74865be42.png",
     "static/media/TidalBoon.png": "/Spirit-Island-Companion/static/media/TidalBoon.7ce63273094bf5383a08.png",
     "static/media/RitualsOfDestruction.png": "/Spirit-Island-Companion/static/media/RitualsOfDestruction.a40569b55b428ec5379f.png",
@@ -81,11 +81,11 @@
     "static/media/uparrowclicked.svg": "/Spirit-Island-Companion/static/media/uparrowclicked.846310aebf0a3bc8f36a9fe1d5e516e6.svg",
     "index.html": "/Spirit-Island-Companion/index.html",
     "main.867442f3.css.map": "/Spirit-Island-Companion/static/css/main.867442f3.css.map",
-    "main.5c1dd88f.js.map": "/Spirit-Island-Companion/static/js/main.5c1dd88f.js.map",
+    "main.648440d1.js.map": "/Spirit-Island-Companion/static/js/main.648440d1.js.map",
     "787.28cb0dcd.chunk.js.map": "/Spirit-Island-Companion/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.867442f3.css",
-    "static/js/main.5c1dd88f.js"
+    "static/js/main.648440d1.js"
   ]
 }
