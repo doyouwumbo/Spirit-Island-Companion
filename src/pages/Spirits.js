@@ -28,7 +28,6 @@ export function Spirits() {
   })
 
   function ifMobile() {
-    console.log(isMobile)
     if (isMobile) {
       return 6;
     }
@@ -53,8 +52,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('river-surges-in-sunlight')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #7fb5a8; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #7fb5a8; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="river" src={RiverCard} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -69,8 +68,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('lightnings-swift-strike')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffa163; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffa163; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="lightning" src={LightningProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -85,8 +84,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('shadows-flicker-like-flames')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #768a8c; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #768a8c; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="shadow" src={ShadowProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -104,8 +103,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('vital-strength-of-the-earth')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ba9d82; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ba9d82; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={VitalProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -120,8 +119,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('thunderspeaker')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #588463; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #588463; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={ThunderspeakerProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -136,8 +135,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('rampant-spread-of-green')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #8acd96; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #8acd96; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={RampantProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -155,8 +154,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('bringer-of-dreams-and-nightmares')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #575e74; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #575e74; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={BringerProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -171,8 +170,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('oceans-hungry-grasp');
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #84b2b7; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #84b2b7; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={OceanProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -200,8 +199,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('river-surges-in-sunlight')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #7fb5a8; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #7fb5a8; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="river" src={RiverCard} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -216,8 +215,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('lightnings-swift-strike')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffa163; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffa163; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="lightning" src={LightningProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -235,8 +234,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('shadows-flicker-like-flames')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #768a8c; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #768a8c; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="shadow" src={ShadowProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -251,8 +250,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('vital-strength-of-the-earth')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ba9d82; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ba9d82; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={VitalProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -271,8 +270,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('thunderspeaker')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #588463; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #588463; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={ThunderspeakerProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -287,8 +286,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('rampant-spread-of-green')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #8acd96; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #8acd96; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={RampantProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -307,8 +306,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('bringer-of-dreams-and-nightmares')
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #575e74; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #575e74; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={BringerProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>
@@ -323,8 +322,8 @@ export function Spirits() {
               onClick={() => {
                 handleClick('oceans-hungry-grasp');
               }}
-              onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #84b2b7; transition: background-color 3s;'})}}
-              onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
+              // onMouseEnter={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #84b2b7; transition: background-color 3s;'})}}
+              // onMouseLeave={() => {window.requestAnimationFrame(()=> { document.body.style = 'background-color: #ffdf85; transition: background-color 3s;'})}}
               >
                 <img alt="vital" src={OceanProfile} style={{maxWidth: '150px', borderRadius: 4}} />
               </Button>

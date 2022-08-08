@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 
 
-export function HoverGrow({scale = 2, timing = 500, translate = 0, children}) {
+export function HoverGrow({scale = 2, transformTime = 500, hoverTime = 500, translateUp = 0, translateDown = 0, translateLeft = 0, translateRight = 0, clickable=false, children}) {
 
   // Check if the card is hovered
   const [isHovered, setIsHovered] = useState(false);
@@ -10,8 +10,9 @@ export function HoverGrow({scale = 2, timing = 500, translate = 0, children}) {
   const ref = useRef();
 
   const style = {
-    transform: isHovered ? `scale(${scale}) translateY(-${translate}px)` : `scale(1)`,
-    transition: `transform ${timing}ms`,
+    ...children.style,
+    transform: isHovered ? `scale(${scale}) translateY(-${translateUp}px) translateY(${translateDown}px) translateX(-${translateLeft}px) translateX(${translateRight}px)` : `scale(1)`,
+    transition: `transform ${transformTime}ms`,
     position: 'relative',
     willChange: 'transform',
     zIndex: isHovered || isAnimated ? 999 : 0
@@ -21,7 +22,8 @@ export function HoverGrow({scale = 2, timing = 500, translate = 0, children}) {
     timeoutId = window.setTimeout(() => {
       setIsAnimated(true);
       setIsHovered(true);
-    }, timing)    
+      window.clearTimeout(timeoutId);
+    }, hoverTime)    
   }
 
   function handleExit() {
@@ -32,6 +34,12 @@ export function HoverGrow({scale = 2, timing = 500, translate = 0, children}) {
       window.clearTimeout(time);
     }, 500);
     window.clearTimeout(timeoutId);
+  }
+
+  function handleClick() {
+    if (clickable && timeoutId !== undefined) {
+      window.clearTimeout(timeoutId);
+    }
   }
 
   useEffect(() => {
@@ -45,7 +53,7 @@ export function HoverGrow({scale = 2, timing = 500, translate = 0, children}) {
   }, []);
 
   return (
-    <span ref={ref} onMouseEnter={handleHover} onMouseLeave={handleExit} onTransitionEnd={() => {setIsAnimated(false)}} style={style}>
+    <span ref={ref} onMouseDown={handleClick} onMouseEnter={handleHover} onMouseLeave={handleExit} onTransitionEnd={() => {setIsAnimated(false)}} style={style}>
       {children}
     </span>
   );

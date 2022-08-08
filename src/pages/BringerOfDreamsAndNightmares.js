@@ -45,10 +45,10 @@ export function BringerOfDreamsAndNightmares() {
       <BrowserView>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Unique Power Cards</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center'}}>
-            <HoverGrow translate={100}><img alt="flash floods" src={DreadApparitions} style={{width: '200px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="wash away" src={DreamsOfTheDahan} style={{width: '200px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="boon of vigor" src={CallOnMidnightsDream} style={{width: '200px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="rivers bounty" src={PredatoryNightmares} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="flash floods" src={DreadApparitions} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="wash away" src={DreamsOfTheDahan} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="boon of vigor" src={CallOnMidnightsDream} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="rivers bounty" src={PredatoryNightmares} style={{width: '200px'}} /></HoverGrow>
           </Stack>
       </BrowserView>
 

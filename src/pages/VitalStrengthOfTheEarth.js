@@ -52,8 +52,8 @@ export function VitalStrengthOfTheEarth() {
           </Stack>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Aspects</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center', mb: '25px'}}>
-            <HoverGrow translate={100}><img alt="Resilience" src={Resilience} style={{width: '350px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="Might" src={Might} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="Resilience" src={Resilience} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="Might" src={Might} style={{width: '350px'}} /></HoverGrow>
           </Stack>
       </BrowserView>
 

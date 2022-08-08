@@ -10,13 +10,11 @@ import '../index.css';
 export function Navbar() {
 
   const navigate = useNavigate();
+  const tokens = window.location.pathname.split("/");
+  console.log()
 
   const [page, setPage] = useState(() => {
-    let data = window.localStorage.getItem('NAVBAR_TAB');
-    if (data === null) {
-      return 'element-tracker';
-    }
-    return data;
+    return tokens[2];
   });
 
   const NavButton = styled(ToggleButton)({
@@ -28,8 +26,8 @@ export function Navbar() {
   });
 
   useEffect(() => {
-    window.localStorage.setItem('NAVBAR_TAB', page);
-  }, [page])
+    setPage(tokens[2]);
+  }, [page, tokens])
 
   return (
     <Box sx={{ml: '10px', mt: '10px', mb: '10px', pr:'10px', minWidth: '600px'}}>

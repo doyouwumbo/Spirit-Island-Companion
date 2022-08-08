@@ -43,10 +43,10 @@ export function OceansHungryGrasp() {
       <BrowserView>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Unique Power Cards</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center'}}>
-            <HoverGrow translate={100}><img alt="flash floods" src={CallOfTheDeeps} style={{width: '200px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="wash away" src={GraspingTide} style={{width: '200px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="boon of vigor" src={Swallow} style={{width: '200px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="rivers bounty" src={TidalBoon} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="flash floods" src={CallOfTheDeeps} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="wash away" src={GraspingTide} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="boon of vigor" src={Swallow} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="rivers bounty" src={TidalBoon} style={{width: '200px'}} /></HoverGrow>
           </Stack>
       </BrowserView>
 

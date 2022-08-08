@@ -43,10 +43,10 @@ export function Thunderspeaker() {
       <BrowserView>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Unique Power Cards</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center'}}>
-            <HoverGrow translate={100}><img alt="flash floods" src={Manifestation} style={{width: '200px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="wash away" src={SuddenAmbush} style={{width: '200px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="boon of vigor" src={VoiceOfThunder} style={{width: '200px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="rivers bounty" src={WordsOfWarning} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="flash floods" src={Manifestation} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="wash away" src={SuddenAmbush} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="boon of vigor" src={VoiceOfThunder} style={{width: '200px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="rivers bounty" src={WordsOfWarning} style={{width: '200px'}} /></HoverGrow>
           </Stack>
       </BrowserView>
 

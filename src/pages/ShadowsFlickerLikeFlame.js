@@ -54,10 +54,10 @@ export function ShadowsFlickerLikeFlame() {
           </Stack>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Aspects</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center', mb: '25px'}}>
-            <HoverGrow translate={100}><img alt="Foreboding" src={Foreboding} style={{width: '350px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="Madness" src={Madness} style={{width: '350px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="Amorphous" src={Amorphous} style={{width: '350px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="Reach" src={Reach} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="Foreboding" src={Foreboding} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="Madness" src={Madness} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="Amorphous" src={Amorphous} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="Reach" src={Reach} style={{width: '350px'}} /></HoverGrow>
           </Stack>
       </BrowserView>
 

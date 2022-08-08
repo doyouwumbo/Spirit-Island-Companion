@@ -53,9 +53,9 @@ export function LightningsSwiftStrike() {
           </Stack>
           <Typography sx={{fontSize: '32px', mt: '25px'}}><b>Aspects</b></Typography>
           <Stack direction="row" spacing={3} sx={{justifyContent: 'center', mb: '25px'}}>
-            <HoverGrow translate={100}><img alt="Immense" src={Immense} style={{width: '350px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="Pandemonium" src={Pandemonium} style={{width: '350px'}} /></HoverGrow>
-            <HoverGrow translate={100}><img alt="Wind" src={Wind} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="Immense" src={Immense} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="Pandemonium" src={Pandemonium} style={{width: '350px'}} /></HoverGrow>
+            <HoverGrow translateUp={100}><img alt="Wind" src={Wind} style={{width: '350px'}} /></HoverGrow>
           </Stack>
       </BrowserView>
 
