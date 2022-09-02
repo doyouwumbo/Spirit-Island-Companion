@@ -20,6 +20,7 @@ function App() {
   // }, false);
 
   return (
+    <div className='app'>
       <Router basename="/Spirit-Island-Companion">
           <Navbar/>
             <Routes>
@@ -35,7 +36,15 @@ function App() {
               <Route path="/spirits/bringer-of-dreams-and-nightmares" element={<BringerOfDreamsAndNightmares />}></Route>
               <Route path="/spirits/oceans-hungry-grasp" element={<OceansHungryGrasp />}></Route>
             </Routes>
-      </Router>
+        </Router>
+        <footer style={{marginTop: 10, marginLeft: 10, marginRight: -10, textAlign: 'center', position: 'fixed', width: '100%', bottom: 10}}>
+          <small>
+              All credit goes the creator to R. Eric Reuss. 
+              All content related to Spirit Island is for the sole purpose 
+              of aiding the player in their games.
+          </small>
+        </footer>
+      </div>
   );
 }
 

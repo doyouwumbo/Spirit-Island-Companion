@@ -46,9 +46,11 @@ export function Navbar() {
                 event.preventDefault()
                 navigate('/' + page);
               }
-            }}>
+              }}>
               <NavButton value='element-tracker' aria-label='element-tracker'><b>Element Tracker</b></NavButton>
               <NavButton value='spirits' aria-label='spirits'><b>Spirits</b></NavButton>
+              <NavButton value='scenarios' aria-label='scenarios'><b>Scenarios</b></NavButton>
+              <NavButton value='adversaries' aria-label='adversaries'><b>Adversaries</b></NavButton>
             </ToggleButtonGroup>
           </Box>
         </Toolbar>
